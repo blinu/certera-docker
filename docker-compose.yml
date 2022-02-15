@@ -1,0 +1,22 @@
+
+version: '3.8'
+
+services:
+  certera:
+    container_name: certera
+    hostname: certera
+    build:
+      context: ./app
+      dockerfile: certera.Dockerfile
+    ports:
+    - 80:80
+    - 443:443
+    entrypoint: /root/certera.io/certera
+    restart: always
+    volumes:
+      - ./vols:/root/certera.io
+
+
+volumes:
+  certeradata:
+    driver: local
