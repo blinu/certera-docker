@@ -14,7 +14,7 @@ services:
     entrypoint: /root/certera.io/certera
     restart: always
     volumes:
-      - ./vols:/root/certera.io
+      - certeradata:/root/certera.io
 
 
 volumes:
